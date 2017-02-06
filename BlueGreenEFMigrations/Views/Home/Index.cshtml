@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BlueGreenEFMigrations.ViewModels.SubjectViewModel>
+
+@{
+    ViewBag.Title = "Constoso School Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Contoso School</h1>
+</div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var subject in Model)
+            {
+                <tr>
+                    <td>@subject.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
