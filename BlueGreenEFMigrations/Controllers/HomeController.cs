@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlueGreenEFMigrations.Models;
+using BlueGreenEFMigrations.ViewModels;
 
 namespace BlueGreenEFMigrations.Controllers
 {
@@ -10,7 +12,19 @@ namespace BlueGreenEFMigrations.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var context = new SchoolDbContext();
+
+            var subjects = context
+                .Subjects
+                .Select(s =>
+                    new SubjectViewModel
+                    {
+                        Id = s.Id,
+                        Title = s.Title
+                    })
+                .ToList();
+
+            return View(subjects);
         }
 
         public ActionResult About()
