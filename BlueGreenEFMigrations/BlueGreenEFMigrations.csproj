@@ -123,6 +123,10 @@
     <Compile Include="Migrations\201702060921530_Initial.Designer.cs">
       <DependentUpon>201702060921530_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702061010086_AddNameToSubject.cs" />
+    <Compile Include="Migrations\201702061010086_AddNameToSubject.Designer.cs">
+      <DependentUpon>201702061010086_AddNameToSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SchoolDbContext.cs" />
     <Compile Include="Models\Subject.cs" />
@@ -173,6 +177,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702060921530_Initial.resx">
       <DependentUpon>201702060921530_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702061010086_AddNameToSubject.resx">
+      <DependentUpon>201702061010086_AddNameToSubject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

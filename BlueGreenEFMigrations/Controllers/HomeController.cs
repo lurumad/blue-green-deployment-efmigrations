@@ -20,7 +20,7 @@ namespace BlueGreenEFMigrations.Controllers
                     new SubjectViewModel
                     {
                         Id = s.Id,
-                        Title = s.Title
+                        Name = s.Name
                     })
                 .ToList();
 
